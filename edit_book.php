@@ -81,7 +81,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Published Year</label>
-                                <input type="text" id="pyear" name="pyear" class="form-control" placeholder="Enter Published Year of Book" value="<?php echo $result['published_year']; ?>" required/>
+                                <input type="number" id="pyear" name="pyear" class="form-control" placeholder="Enter Published Year of Book" value="<?php echo $result['published_year']; ?>" required/>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -116,7 +116,7 @@
         $id = $_POST['id'];
         $title = $_POST['title'];
         $author = $_POST['author'];
-        $pyear = $_POST['published_year'];
+        $pyear = $_POST['pyear'];
         $genre = $_POST['genre'];
 
         $uquery = "UPDATE book SET title='$title',author='$author',published_year='$pyear',genre='$genre' WHERE id = '$id'"; 
